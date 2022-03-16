@@ -83,8 +83,6 @@ export const SocialMediaWrap = styled.div`
     }
 `;
 
-<<<<<<< HEAD
-=======
 export const Icon = styled.img`
     height: auto;
     width: auto;
@@ -92,7 +90,6 @@ export const Icon = styled.img`
     align-items: center;
 `
 
->>>>>>> e0c230ad3e95ad75dd1173857c2f6173f7bd243e
 export const SocialLogo = styled(Link)`
     color: #fff;
     justify-self: start;

@@ -1,10 +1,7 @@
 import React from 'react';
 import { FaFacebook, FaInstagram, FaYoutube, FaTwitter, FaLinkedin } from 'react-icons/fa';
 import { animateScroll as scroll } from 'react-scroll/modules';
-<<<<<<< HEAD
-=======
 import logo from '../../images/nafa-logo.png';
->>>>>>> e0c230ad3e95ad75dd1173857c2f6173f7bd243e
 import {
     FooterContainer,
     FooterWrap,
@@ -15,10 +12,7 @@ import {
     FooterLink,
     SocialMedia,
     SocialMediaWrap,
-<<<<<<< HEAD
-=======
     Icon,
->>>>>>> e0c230ad3e95ad75dd1173857c2f6173f7bd243e
     SocialLogo,
     WebsiteRights,
     SocialIcons,
@@ -72,18 +66,12 @@ const Footer = () => {
 
             <SocialMedia>
                 <SocialMediaWrap>
-<<<<<<< HEAD
-                    <SocialLogo to='/' onClick={toggleHome}>
-                        Nafa
-                    </SocialLogo>
-=======
 
                     <Icon src={logo} onClick={toggleHome}/>
 
                     {/* <SocialLogo to='/' onClick={toggleHome}>
                         Nafa
                     </SocialLogo> */}
->>>>>>> e0c230ad3e95ad75dd1173857c2f6173f7bd243e
                     <WebsiteRights>
                         NAFA © {new Date().getFullYear()} All rights reserved.
                     </WebsiteRights>

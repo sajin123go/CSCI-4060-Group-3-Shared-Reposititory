@@ -29,15 +29,12 @@ export const NavbarContainer = styled.div`
     max-width: 1100px;
 `;
 
-<<<<<<< HEAD
-=======
 export const Icon = styled.img`
     height: ${({scrollNav}) => (scrollNav ? '150%' : '300%')};
     width: auto;
     cursor: pointer;
     align-items: center;
 `
->>>>>>> e0c230ad3e95ad75dd1173857c2f6173f7bd243e
 export const NavLogo =  styled(LinkR)`
     color: gold;
     justify-self: flex-start;
