@@ -19,5 +19,7 @@ export const userObjOne = {
   dark: true,
   primary: true,
   darkText: false,
-  to: "/account",
+  to: "/userEdit",
+  buttonImgLabel: "Add Picture",
+  imgTo: "",
 };

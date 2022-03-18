@@ -39,6 +39,8 @@ const InfoSecton = ({
   dark,
   dark2,
   to,
+  buttonImgLabel,
+  imgTo
 }) => {
   return (
     <>
@@ -76,6 +78,21 @@ const InfoSecton = ({
             <Column2>
               <ImgWrap>
                 <Img src={img} alt={alt} />
+                <BtnWrap>
+                  <ButtonR
+                    to={imgTo}
+                    smooth={true}
+                    duration={500}
+                    spy={true}
+                    exact="true"
+                    offset={-80}
+                    primary={primary ? 1 : 0}
+                    dark={dark ? 1 : 0}
+                    dark2={dark2 ? 1 : 0}
+                  >
+                    {buttonImgLabel}
+                  </ButtonR>
+                </BtnWrap>
               </ImgWrap>
             </Column2>
           </InfoRow>

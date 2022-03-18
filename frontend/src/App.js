@@ -6,6 +6,7 @@ import LoginApp from "./components/login-register/LoginApp";
 import AdminPage from "./pages/AdminPage";
 import User from "./pages/UserPage";
 import Account from "./pages/UserAccountDetail";
+import Edit from "./pages/EditProfile";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/adminPage" element={<AdminPage />} exact />
         <Route path="/user" element={<User />} exact />
         <Route path="/account" element={<Account />} exact />
+        <Route path="/userEdit" elemet={<Edit />} exact />
       </Routes>
     </Router>
   );
