@@ -17,7 +17,7 @@ function App() {
         <Route path="/adminPage" element={<AdminPage />} exact />
         <Route path="/user" element={<User />} exact />
         <Route path="/account" element={<Account />} exact />
-        <Route path="/userEdit" elemet={<Edit />} exact />
+        <Route path="/userEdit" element={<Edit />} exact />
       </Routes>
     </Router>
   );

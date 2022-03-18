@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import Navbar from "../componentsUser/Navbar";
 import Sidebar from "../componentsUser/Sidebar";
 import Footer from "../componentsUser/Footer";
+import EditSections from "../userAccountComponents/EditSections";
 
-const EditProfile = () => {
+const Edit = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => {
@@ -13,9 +14,10 @@ const EditProfile = () => {
     <>
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
+      <EditSections />
       <Footer />
     </>
   );
 };
 
-export default EditProfile;
+export default Edit;
