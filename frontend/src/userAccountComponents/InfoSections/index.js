@@ -21,18 +21,24 @@ const InfoSecton = ({
   lightBg,
   id,
   imgStart,
-  topLine,
+  flname,
   lightText,
-  headline,
+  who,
   darkText,
-  description,
+  email,
+  phone,
+  address1,
+  address2,
+  city,
+  state,
+  zip,
   buttonLabel,
   img,
   alt,
   primary,
   dark,
   dark2,
-  to
+  to,
 }) => {
   return (
     <>
@@ -41,12 +47,18 @@ const InfoSecton = ({
           <InfoRow imgStart={imgStart}>
             <Column1>
               <TextWrapper>
-                <TopLine>{topLine}</TopLine>
-                <Heading lightText={lightText}>{headline}</Heading>
-                <Subtitle darkText={darkText}>{description}</Subtitle>
+                <TopLine>{flname}</TopLine>
+                <Heading lightText={lightText}>{who}</Heading>
+                <Subtitle darkText={darkText}>{email}</Subtitle>
+                <Subtitle darkText={darkText}>{phone}</Subtitle>
+                <Subtitle darkText={darkText}>{address1}</Subtitle>
+                <Subtitle darkText={darkText}>{address2}</Subtitle>
+                <Subtitle darkText={darkText}>
+                  {city + ", " + state + " " + zip}
+                </Subtitle>
                 <BtnWrap>
                   <ButtonR
-                    to= {to}
+                    to={to}
                     smooth={true}
                     duration={500}
                     spy={true}
