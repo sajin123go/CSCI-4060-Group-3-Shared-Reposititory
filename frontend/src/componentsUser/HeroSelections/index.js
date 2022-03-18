@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ImageSlider from "../Imageslider/ImageSlider";
 import { SliderData } from "../Imageslider/SliderData";
 import Video from "../../videos/video.mp4";
-import { Button } from "../ButtonElement";
+import { ButtonS } from "../ButtonElement";
 import {
   HeroContainer,
   HeroBg,
@@ -32,7 +32,7 @@ const HeroSection = () => {
         <HeroH1> Welcome to NAFA.</HeroH1>
         <HeroP>Be a Member to keep connecting with friends and family.</HeroP>
         <HeroBtnWrapper>
-          <Button
+          <ButtonS
             to="signup"
             onMouseEnter={onHover}
             onMouseLeave={onHover}
@@ -45,7 +45,7 @@ const HeroSection = () => {
             offset={-80}
           >
             Go to Account {hover ? <ArrowForward /> : <ArrowRight />}
-          </Button>
+          </ButtonS>
         </HeroBtnWrapper>
       </HeroContent>
     </HeroContainer>

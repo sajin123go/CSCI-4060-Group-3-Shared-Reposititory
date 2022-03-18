@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Icon1 from "../../images/png-4.png";
 import Icon2 from "../../images/png-2.png";
 import Icon3 from "../../images/png-3.png";
-import { Button } from "../ButtonElement";
+import { ButtonS } from "../ButtonElement";
 import {
   ServicesContainer,
   ServicesH1,
@@ -54,7 +54,7 @@ const EventsList = () => {
         </ServicesCard>
       </ServicesWrapper>
       <HeroBtnWrapper>
-        <Button
+        <ButtonS
           to="signup"
           onMouseEnter={onHover}
           onMouseLeave={onHover}
@@ -67,7 +67,7 @@ const EventsList = () => {
           offset={-80}
         >
           more events {hover ? <ArrowForward /> : <ArrowRight />}
-        </Button>
+        </ButtonS>
       </HeroBtnWrapper>
     </ServicesContainer>
   );

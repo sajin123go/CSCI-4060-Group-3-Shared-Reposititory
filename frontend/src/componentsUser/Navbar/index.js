@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { IconContext } from "react-icons/lib";
 import logo from "../../images/nafa-logo.png";
 import { animateScroll as scroll } from "react-scroll";
-
 import { FaBars } from "react-icons/fa";
 import {
   Nav,
@@ -100,7 +99,7 @@ const Navbar = ({ toggle }) => {
               </NavItem>
             </NavMenu>
             <NavBtn>
-              <NavBtnLink to="/user">Log Out</NavBtnLink>
+              <NavBtnLink to="/">Log Out</NavBtnLink>
             </NavBtn>
           </NavbarContainer>
         </Nav>
