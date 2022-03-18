@@ -7,6 +7,7 @@ import AdminPage from "./pages/AdminPage";
 import User from "./pages/UserPage";
 import Account from "./pages/UserAccountDetail";
 import Edit from "./pages/EditProfile";
+import Mpayment from "./pages/Mpayment";
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
         <Route path="/user" element={<User />} exact />
         <Route path="/account" element={<Account />} exact />
         <Route path="/userEdit" element={<Edit />} exact />
-      </Routes>
+        <Route path="/payment" element={<Mpayment/>} exact />
+       </Routes>
     </Router>
   );
 }

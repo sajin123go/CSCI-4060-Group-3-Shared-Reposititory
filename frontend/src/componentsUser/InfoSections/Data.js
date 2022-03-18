@@ -31,5 +31,5 @@ export const userObjThree = {
   dark: false,
   primary: false,
   darkText: true,
-  to: "/account"
+  to: "/payment",
 };
