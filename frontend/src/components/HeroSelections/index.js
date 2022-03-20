@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ImageSlider from "../Imageslider/ImageSlider";
 import { SliderData } from "../Imageslider/SliderData";
 import Video from "../../videos/video.mp4";
-import { Button } from "../ButtonElement";
+import { ButtonS as  Button} from "../ButtonElement";
 import {
   HeroContainer,
   HeroBg,
