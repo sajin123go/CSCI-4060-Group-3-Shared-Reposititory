@@ -1,15 +1,17 @@
 import React, { useState } from "react";
-import HeroSection from "../componentsUser/HeroSelections";
-import Navbar from "../componentsUser/Navbar";
+import HeroSection from "../components/HeroSelections";
+import Navbar from "../components/Navbar";
 import Sidebar from "../componentsUser/Sidebar";
-import InfoSection from "../componentsUser/InfoSections";
-import {
-  userObjOne,
-  userObjThree,
-} from "../componentsUser/InfoSections/Data";
+import InfoSection from "../components/InfoSections";
 import Services from "../componentsUser/services";
-import Footer from "../componentsUser/Footer";
+import Footer from "../components/Footer";
 import EventsList from "../componentsUser/EventsList";
+import { userHomeObj } from "../components/HeroSelections/HeroData";
+import { navUserObj } from "../components/Navbar/NavData";
+import {
+  userAccountObj,
+  userPaymentObj,
+} from "../components/InfoSections/Data";
 
 const User = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,12 +22,12 @@ const User = () => {
   return (
     <>
       <Sidebar isOpen={isOpen} toggle={toggle} />
-      <Navbar toggle={toggle} />
-      <HeroSection />
-      <InfoSection {...userObjOne} />
+      <Navbar {...navUserObj} toggle={toggle} />
+      <HeroSection {...userHomeObj} />
+      <InfoSection {...userAccountObj} />
       <EventsList />
       <Services />
-      <InfoSection {...userObjThree} />
+      <InfoSection {...userPaymentObj} />
       <Footer />
     </>
   );

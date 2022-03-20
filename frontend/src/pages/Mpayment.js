@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import Navbar from "../componentsUser/Navbar";
+import Navbar from "../components/Navbar";
 import Sidebar from "../componentsUser/Sidebar";
-import Footer from "../componentsUser/Footer";
+import Footer from "../components/Footer";
+import MemberPayment from "../userAccountComponents/MemberPayment";
+import { navUserObj } from "../components/Navbar/NavData";
 
 const Mpayment = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +14,8 @@ const Mpayment = () => {
   return (
     <>
       <Sidebar isOpen={isOpen} toggle={toggle} />
-      <Navbar toggle={toggle} />
+      <Navbar {...navUserObj} toggle={toggle} />
+      <MemberPayment />
       <Footer />
     </>
   );

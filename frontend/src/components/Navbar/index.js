@@ -17,7 +17,19 @@ import {
   NavBtnLink,
 } from "./NavbarElements";
 
-const Navbar = ({ toggle }) => {
+const Navbar = ({
+  toggle,
+  navItem1,
+  navItem2,
+  navItem3,
+  navItem4,
+  navLink1,
+  navLink2,
+  navLink3,
+  navLink4,
+  navLink5,
+  navItem5,
+}) => {
   const [scrollNav, setScrollNav] = useState(false);
 
   const changeNav = () => {
@@ -52,55 +64,55 @@ const Navbar = ({ toggle }) => {
             <NavMenu>
               <NavItem>
                 <NavLinks
-                  to="about"
+                  to={navLink1}
                   smooth={true}
                   duration={500}
                   spy={true}
                   exact="true"
                   offset={-80}
                 >
-                  About
+                  {navItem1}
                 </NavLinks>
               </NavItem>
               <NavItem>
                 <NavLinks
-                  to="membership"
+                  to={navLink2}
                   smooth={true}
                   duration={500}
                   spy={true}
                   exact="true"
                   offset={-80}
                 >
-                  Membership
+                  {navItem2}
                 </NavLinks>
               </NavItem>
               <NavItem>
                 <NavLinks
-                  to="scholarship"
+                  to={navLink3}
                   smooth={true}
                   duration={500}
                   spy={true}
                   exact="true"
                   offset={-80}
                 >
-                  Scholarship
+                  {navItem3}
                 </NavLinks>
               </NavItem>
               <NavItem>
                 <NavLinks
-                  to="signup"
+                  to={navLink4}
                   smooth={true}
                   duration={500}
                   spy={true}
                   exact="true"
                   offset={-80}
                 >
-                  Sign Up
+                  {navItem4}
                 </NavLinks>
               </NavItem>
             </NavMenu>
             <NavBtn>
-              <NavBtnLink to="/user">Sign In</NavBtnLink>
+              <NavBtnLink to={navLink5}> {navItem5}</NavBtnLink>
             </NavBtn>
           </NavbarContainer>
         </Nav>
