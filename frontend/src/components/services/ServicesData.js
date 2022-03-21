@@ -4,24 +4,28 @@ import { membershipData } from "./membershipData";
 
 export const scholarshipComponents = {
   id: "scholarship",
-  heading: "Donate for out Tigers",
+  heading: "Donate for our Tigers",
   cardsData: scholarshipData,
-  buttonTo: "",
+  buttonTo: "/scholarship",
   buttonLable: "More Scholarship",
   lightBg: false,
   lightText: true,
   cLightBg: true,
+  cButtonTo: "/scholarship",
+  cButtonLabel: "Donate",
 };
 
 export const eventsComponenets = {
   id: "events",
   heading: "Events",
   cardsData: eventData,
-  buttonTo: "",
+  buttonTo: "/events",
   buttonLable: "More Events",
   lightBg: true,
   lightText: false,
   cLightBg: false,
+  cButtonTo: "/events",
+  cButtonLabel: "Going",
 };
 
 export const membershipComponents = {
@@ -33,4 +37,6 @@ export const membershipComponents = {
   lightBg: false,
   lightText: true,
   cLightBg: true,
+  cButtonTo: "",
+  cButtonLabel: "Buy",
 };

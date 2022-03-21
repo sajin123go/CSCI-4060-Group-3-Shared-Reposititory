@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ButtonS } from "../ButtonElement";
+import { ButtonR } from "../ButtonElement";
 import {
   ServicesContainer,
   ServicesH1,
@@ -19,6 +19,8 @@ const Services = ({
   lightBg,
   lightText,
   cLightBg,
+  cButtonLabel,
+  cButtonTo,
 }) => {
   const [hover, setHover] = useState(false);
   const [users, setUsers] = useState(cardsData);
@@ -38,11 +40,13 @@ const Services = ({
             description={user.description}
             lightText={lightText}
             cLightBg={cLightBg}
+            cButtonLabel={cButtonLabel}
+            cButtonTo={cButtonTo}
           />
         ))}
       </ServicesWrapper>
       <HeroBtnWrapper>
-        <ButtonS
+        <ButtonR
           to={buttonTo}
           onMouseEnter={onHover}
           onMouseLeave={onHover}
@@ -55,7 +59,7 @@ const Services = ({
           offset={-80}
         >
           {buttonLable} {hover ? <ArrowForward /> : <ArrowRight />}
-        </ButtonS>
+        </ButtonR>
       </HeroBtnWrapper>
     </ServicesContainer>
   );

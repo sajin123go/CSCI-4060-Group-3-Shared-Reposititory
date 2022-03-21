@@ -4,9 +4,9 @@ import Sidebar from "../components/Sidebar";
 import Footer from "../components/Footer";
 import { navUserObj } from "../components/Navbar/NavData";
 import Services from "../components/services";
-import { membershipComponents } from "../components/services/ServicesData";
+import { scholarshipComponents } from "../components/services/ServicesData";
 
-const Mpayment = () => {
+const UserScholarship = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => {
@@ -16,10 +16,10 @@ const Mpayment = () => {
     <>
       <Sidebar {...navUserObj} isOpen={isOpen} toggle={toggle} />
       <Navbar {...navUserObj} toggle={toggle} />
-      <Services {...membershipComponents}/>
+      <Services {...scholarshipComponents} />
       <Footer />
     </>
   );
 };
 
-export default Mpayment;
+export default UserScholarship;

@@ -10,7 +10,15 @@ import {
   ArrowRight,
 } from "./ServicesElements";
 
-const Cards = ({ icon, heading, description, lightText, cLightBg }) => {
+const Cards = ({
+  icon,
+  heading,
+  description,
+  cButtonTo,
+  cButtonLabel,
+  lightText,
+  cLightBg,
+}) => {
   const [hover, setHover] = useState(false);
 
   const onHover = () => {
@@ -24,7 +32,7 @@ const Cards = ({ icon, heading, description, lightText, cLightBg }) => {
         <ServicesP lightText={lightText}>{description}</ServicesP>
         <HeroBtnWrapper>
           <ButtonS
-            to="signup"
+            to={cButtonTo}
             onMouseEnter={onHover}
             onMouseLeave={onHover}
             primary="true"
@@ -34,7 +42,7 @@ const Cards = ({ icon, heading, description, lightText, cLightBg }) => {
             spy={true}
             exact="true"
           >
-            Donate {hover ? <ArrowForward /> : <ArrowRight />}
+            {cButtonLabel} {hover ? <ArrowForward /> : <ArrowRight />}
           </ButtonS>
         </HeroBtnWrapper>
       </ServicesCard>
