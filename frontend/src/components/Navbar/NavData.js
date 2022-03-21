@@ -1,10 +1,10 @@
 export const navHomeObj = {
   navLink1: "about",
-  navLink2: "event",
+  navLink2: "membership",
   navLink3: "scholarship",
   navLink4: "signup",
   navItem1: "About",
-  navItem2: "event",
+  navItem2: "Membership",
   navItem3: "Scholarship",
   navItem4: "Sign Up",
   navItem5: "Sign In",

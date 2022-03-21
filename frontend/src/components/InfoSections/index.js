@@ -1,5 +1,5 @@
 import React from "react";
-import { ButtonS as Button } from "../ButtonElement";
+import { ButtonR as Button } from "../ButtonElement";
 import {
   InfoContainer,
   InfoWrapper,
@@ -30,6 +30,7 @@ const InfoSecton = ({
   primary,
   dark,
   dark2,
+  to,
 }) => {
   return (
     <>
@@ -43,7 +44,7 @@ const InfoSecton = ({
                 <Subtitle darkText={darkText}>{description}</Subtitle>
                 <BtnWrap>
                   <Button
-                    to="home"
+                    to={to}
                     smooth={true}
                     duration={500}
                     spy={true}

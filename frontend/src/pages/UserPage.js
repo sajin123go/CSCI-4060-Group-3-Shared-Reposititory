@@ -5,13 +5,16 @@ import Sidebar from "../components/Sidebar";
 import InfoSection from "../components/InfoSections";
 import Services from "../components/services";
 import Footer from "../components/Footer";
-import EventsList from "../components/EventsList";
 import { userHomeObj } from "../components/HeroSelections/HeroData";
 import { navUserObj } from "../components/Navbar/NavData";
 import {
   userAccountObj,
   userPaymentObj,
 } from "../components/InfoSections/Data";
+import {
+  scholarshipComponents,
+  eventsComponenets,
+} from "../components/services/ServicesData";
 
 const User = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,8 +28,8 @@ const User = () => {
       <Navbar {...navUserObj} toggle={toggle} />
       <HeroSection {...userHomeObj} />
       <InfoSection {...userAccountObj} />
-      <EventsList />
-      <Services />
+      <Services {...eventsComponenets} />
+      <Services {...scholarshipComponents} />
       <InfoSection {...userPaymentObj} />
       <Footer />
     </>
