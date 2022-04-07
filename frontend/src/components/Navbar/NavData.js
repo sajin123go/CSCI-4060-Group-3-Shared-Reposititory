@@ -8,7 +8,7 @@ export const navHomeObj = {
   navItem3: "Scholarship",
   navItem4: "Sign Up",
   navItem5: "Sign In",
-  navLink5: "/user",
+  navLink5: "/signin",
 };
 
 export const navUserObj = {

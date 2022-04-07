@@ -5,6 +5,17 @@
   font-family: "Encode Sans Expanded", sans-serif;
 }
 
+.container{
+  display: flex;
+  margin-top: 10px;
+}
+
+
+.link{
+  text-decoration: none;
+  color: inherit;
+}
+
 .slider {
   position: relative;
   height: 100vh;
