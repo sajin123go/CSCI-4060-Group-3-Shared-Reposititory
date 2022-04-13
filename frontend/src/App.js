@@ -25,7 +25,6 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} exact />
         <Route path="/signin" element={<LoginApp />} exact />
         <Route path="/adminPage" element={<AdminPage />} exact />
         <Route path="/user" element={<UserPage />} exact />
@@ -34,6 +33,7 @@ function App() {
         <Route path="/payment" element={<Mpayment />} exact />
         <Route path="/events" element={<UserEvent />} exact />
         <Route path="/scholarship" element={<UserScholarship />} exact />
+        <Route path="/" element={<Home />}  />
       </Routes>
 
       {/* <Topbar />

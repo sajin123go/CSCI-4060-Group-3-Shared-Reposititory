@@ -25,6 +25,7 @@ function Admin() {
           <Route path="/event" element={<EventList />} exact />
           <Route path="/event/:eventId" element={<Event />} exact />
           <Route path="/newevent" element={<NewEvent />} exact />
+
         </Routes>
       </div>
     </Router>
