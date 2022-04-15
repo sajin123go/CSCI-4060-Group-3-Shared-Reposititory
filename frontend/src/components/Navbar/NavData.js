@@ -2,13 +2,13 @@ export const navHomeObj = {
   navLink1: "about",
   navLink2: "membership",
   navLink3: "scholarship",
-  navLink4: "signup",
+  navLink4: "/register",
   navItem1: "About",
   navItem2: "Membership",
   navItem3: "Scholarship",
   navItem4: "Sign Up",
   navItem5: "Sign In",
-  navLink5: "/user",
+  navLink5: "/signin",
 };
 
 export const navUserObj = {

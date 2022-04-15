@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import './style.scss';
 //import loginImg from "../../login.svg";
 import axios from "../../../axios";
 import ReCAPTCHA from "react-google-recaptcha";

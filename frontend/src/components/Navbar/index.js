@@ -12,6 +12,7 @@ import {
   NavMenu,
   NavItem,
   NavLinks,
+  NavLinksR,
   NavBtn,
   Icon,
   NavBtnLink,
@@ -99,7 +100,7 @@ const Navbar = ({
                 </NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks
+                <NavLinksR
                   to={navLink4}
                   smooth={true}
                   duration={500}
@@ -108,7 +109,7 @@ const Navbar = ({
                   offset={-80}
                 >
                   {navItem4}
-                </NavLinks>
+                </NavLinksR>
               </NavItem>
             </NavMenu>
             <NavBtn>
