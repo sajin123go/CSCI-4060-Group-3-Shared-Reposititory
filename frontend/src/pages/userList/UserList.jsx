@@ -2,17 +2,41 @@ import "./userList.css";
 import { DataGrid } from '@material-ui/data-grid';
 import { DeleteOutline } from '@material-ui/icons';
 import { userRows } from "../../dummyData";
-import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { Link,useNavigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import axios from "../../axios";
 
 export default function UserList() {
-  
+  const navigate = useNavigate();
   const [data, setData] = useState(userRows);
 
   const handleDelete = (id) => {
-    setData(data.filter((item) => item.id !== id));
+    axios
+//.post("/register", {token,firstName,lastName, email, password })
+.delete("/member/delete/"+id)
+.then((res) => {
+  const updatedData = data.filter(member=>member.id!=id)
+  setData(updatedData);
+  navigate("/users");
+})
   };
   
+  useEffect(() => {
+      const dummyArray = [];
+    // Update the document title using the browser API
+    axios.get("/admin/member/allMembers").then(
+      res=>{
+      res.data.map(member=>dummyArray.push({id:member.memberId,...member}))
+      setData(dummyArray);
+    }
+      ).catch(err=>console.log(err));
+  },[]);
+
+  // const editUserHandler=(event)=>{
+  //   event.preventDefault();
+
+  // }
+
   const columns = [
     { field: "id", headerName: "ID", width: 90 },
     {

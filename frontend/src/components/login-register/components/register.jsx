@@ -57,7 +57,7 @@ const Register = (props) => {
   const registerUserHandler = () => { 
     axios
       //.post("/register", {token,firstName,lastName, email, password })
-      .post("/register", {firstName,lastName, email, password })
+      .post("/member/register", {firstName,lastName, email, password })
       .then((res) => {
         console.log(res);
         navigate("/");

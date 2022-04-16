@@ -43,15 +43,26 @@ function App() {
   return (
     <Router>
       <Routes>
+<<<<<<< HEAD
         <Route path="/" element={<Home />} exact />
         <Route path="/signin" element={<SigninPage />} />
         <Route path="/register" element={<RegisterPage />} exact />
         {/*<Route path="/user" element={<UserPage />} exact />
+=======
+        <Route path="/signin" element={<LoginApp />} exact />
+        <Route path="/adminPage" element={<AdminPage />} exact />
+        <Route path="/user" element={<UserPage />} exact />
+>>>>>>> aab73481516292c6a34cad70e0cf593fc1e56df2
         <Route path="/account" element={<Account />} exact />
         <Route path="/userEdit" element={<Edit />} exact />
         <Route path="/payment" element={<Mpayment />} exact />
         <Route path="/events" element={<UserEvent />} exact />
+<<<<<<< HEAD
         <Route path="/scholarship" element={<UserScholarship />} exact /> */}
+=======
+        <Route path="/scholarship" element={<UserScholarship />} exact />
+        <Route path="/" element={<Home />}  />
+>>>>>>> aab73481516292c6a34cad70e0cf593fc1e56df2
       </Routes>
 
       {/* <Topbar />

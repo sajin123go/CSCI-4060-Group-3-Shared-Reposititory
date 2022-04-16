@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Sidebar from "./components/Sidebars/Sidebar";
@@ -25,7 +25,6 @@ function Admin() {
           <Route path="/event" element={<EventList />} exact />
           <Route path="/event/:eventId" element={<Event />} exact />
           <Route path="/newevent" element={<NewEvent />} exact />
-          
         </Routes>
       </div>
     </Router>
