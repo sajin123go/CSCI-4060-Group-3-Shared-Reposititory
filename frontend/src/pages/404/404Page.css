@@ -1,0 +1,15 @@
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    margin:0;
+    padding:0;
+    display: flex;
+    flex-wrap:wrap;
+    flex-direction: column;
+    flex-shrink:initial;
+    align-items: center;
+    font-size: 30pt;
+    justify-content: center;
+   
+}

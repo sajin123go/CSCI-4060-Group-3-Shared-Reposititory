@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import './style.scss';
 //import loginImg from "../../login.svg";
 import axios from "../../../axios";
 import ReCAPTCHA from "react-google-recaptcha";
@@ -56,7 +57,7 @@ const Register = (props) => {
   const registerUserHandler = () => { 
     axios
       //.post("/register", {token,firstName,lastName, email, password })
-      .post("/register", {firstName,lastName, email, password })
+      .post("/member/register", {firstName,lastName, email, password })
       .then((res) => {
         console.log(res);
         navigate("/");

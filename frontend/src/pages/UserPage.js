@@ -1,30 +1,38 @@
-import React, {useState} from 'react';
-import HeroSection from '../componentsUser/HeroSelections';
-import Navbar from '../componentsUser/Navbar';
-import Sidebar from '../componentsUser/Sidebar';
-import InfoSection from '../componentsUser/InfoSections';
-import {userObjOne, userObjTwo, userObjThree} from '../componentsUser/InfoSections/Data';
-import Services from '../componentsUser/services';
-import Footer from '../componentsUser/Footer';
+import React, { useState } from "react";
+import HeroSection from "../components/HeroSelections";
+import Navbar from "../components/Navbar";
+import Sidebar from "../components/Sidebar";
+import InfoSection from "../components/InfoSections";
+import Services from "../components/services";
+import Footer from "../components/Footer";
+import { userHomeObj } from "../components/HeroSelections/HeroData";
+import { navUserObj } from "../components/Navbar/NavData";
+import {
+  userAccountObj,
+  userPaymentObj,
+} from "../components/InfoSections/Data";
+import {
+  scholarshipComponents,
+  eventsComponenets,
+} from "../components/services/ServicesData";
 
 const User = () => {
+  const [isOpen, setIsOpen] = useState(false);
 
-    const [isOpen, setIsOpen] = useState(false)
-
-    const toggle = () => {
-        setIsOpen(!isOpen)
-    }
+  const toggle = () => {
+    setIsOpen(!isOpen);
+  };
   return (
-      <>
-        <Sidebar isOpen = {isOpen} toggle = {toggle} />
-        <Navbar toggle ={toggle}  />
-        <HeroSection />
-        <InfoSection {...userObjOne}/>
-        <InfoSection {...userObjTwo}/>
-        <Services />
-        <InfoSection {...userObjThree}/>
-        <Footer />
-      </>      
+    <>
+      <Sidebar {...navUserObj} isOpen={isOpen} toggle={toggle} />
+      <Navbar {...navUserObj} toggle={toggle} />
+      <HeroSection {...userHomeObj} />
+      <InfoSection {...userAccountObj} />
+      <Services {...eventsComponenets} />
+      <Services {...scholarshipComponents} />
+      <InfoSection {...userPaymentObj} />
+      <Footer />
+    </>
   );
 };
 

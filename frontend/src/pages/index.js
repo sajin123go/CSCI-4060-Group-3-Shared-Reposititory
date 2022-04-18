@@ -1,30 +1,36 @@
-import React, {useState} from 'react';
-import HeroSection from '../components/HeroSelections';
-import Navbar from '../components/Navbar';
-import Sidebar from '../components/Sidebar';
-import InfoSection from '../components/InfoSections';
-import {homeObjOne, homeObjTwo, homeObjThree} from '../components/InfoSections/Data';
-import Services from '../components/services';
-import Footer from '../components/Footer';
+import React, { useState } from "react";
+import HeroSection from "../components/HeroSelections";
+import Navbar from "../components/Navbar";
+import Sidebar from "../components/Sidebar";
+import InfoSection from "../components/InfoSections";
+import { heroHomeObj } from "../components/HeroSelections/HeroData";
+import {
+  homeObjOne,
+  homeObjTwo,
+  homeObjThree,
+} from "../components/InfoSections/Data";
+import Services from "../components/services";
+import Footer from "../components/Footer";
+import { navHomeObj } from "../components/Navbar/NavData";
+import { scholarshipComponents } from "../components/services/ServicesData";
 
 const Home = () => {
+  const [isOpen, setIsOpen] = useState(false);
 
-    const [isOpen, setIsOpen] = useState(false)
-
-    const toggle = () => {
-        setIsOpen(!isOpen)
-    }
+  const toggle = () => {
+    setIsOpen(!isOpen);
+  };
   return (
-      <>
-        <Sidebar isOpen = {isOpen} toggle = {toggle} />
-        <Navbar toggle ={toggle}  />
-        <HeroSection />
-        <InfoSection {...homeObjOne}/>
-        <InfoSection {...homeObjTwo}/>
-        <Services />
-        <InfoSection {...homeObjThree}/>
-        <Footer />
-      </>      
+    <>
+      <Sidebar {...navHomeObj} isOpen={isOpen} toggle={toggle} />
+      <Navbar {...navHomeObj} toggle={toggle} />
+      <HeroSection {...heroHomeObj} />
+      <InfoSection {...homeObjOne} />
+      <InfoSection {...homeObjTwo} />
+      <Services {...scholarshipComponents}/>
+      <InfoSection {...homeObjThree} />
+      <Footer />
+    </>
   );
 };
 
