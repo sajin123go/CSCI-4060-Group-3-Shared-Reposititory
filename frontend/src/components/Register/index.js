@@ -58,9 +58,8 @@ const Register = () => {
 
   return (
     <>
-      <Container>
+      <Container id= "registerForm">
         <FormWrap>
-          <Icon to="/">Nafa</Icon>
           <FormContent>
             <Form action="#">
               <div className="p-3 py-5">

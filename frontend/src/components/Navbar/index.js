@@ -33,7 +33,7 @@ const Navbar = ({
 }) => {
   const [scrollNav, setScrollNav] = useState(false);
 
-  const changeNav = () => {
+  const changeNav = (props) => {
     if (window.scrollY >= 80) {
       setScrollNav(true);
     } else {

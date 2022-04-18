@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export const Container = styled.div`
   min-height: 692px;
-  position: relative;
+  position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
@@ -21,8 +21,6 @@ export const FormWrap = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 100px;
-  margin-bottom: 100px;
   @media screen and (max-width: 400px) {
     height: 80%;
   }
@@ -53,7 +51,7 @@ export const FormContent = styled.div`
 `;
 export const Form = styled.form`
   background: #010101;
-  max-width: 600px;
+  max-width: 400px;
   height: auto;
   width: 100%;
   z-index: 1;
@@ -84,7 +82,6 @@ export const FormLabel = styled.label`
 
 export const FormInput = styled.input`
   padding: 16px 16px;
-  width: 100%;
   margin-bottom: 32px;
   border: none;
   border-radius: 4px;
