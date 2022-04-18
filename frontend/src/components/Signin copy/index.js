@@ -26,7 +26,7 @@ import App from "../../App";
 
 const SignIn = ({ loading, error, ...props }) => {
   const userRef = useRef();
-  const errRef = useRef
+  const errRef = useRef;
 
   const navigate = useNavigate();
   const [values, setValues] = useState({
@@ -122,21 +122,20 @@ const SignIn = ({ loading, error, ...props }) => {
   );
 };
 
-const mapStateToProps=({auth})=>{
-  console.log("state ",auth)
+const mapStateToProps = ({ auth }) => {
+  console.log("state ", auth);
   return {
-      loading:auth.loading,
-      error:auth.error
-}}
+    loading: auth.loading,
+    error: auth.error,
+  };
+};
 
-
-const mapDispatchToProps=(dispatch)=>{
-
+const mapDispatchToProps = (dispatch) => {
   return {
-      authenticate :()=> dispatch(authenticate()),
-      setUser:(data)=> dispatch(authSuccess(data)),
-      loginFailure:(message)=>dispatch(authFailure(message))
-  }
-}
+    authenticate: () => dispatch(authenticate()),
+    setUser: (data) => dispatch(authSuccess(data)),
+    loginFailure: (message) => dispatch(authFailure(message)),
+  };
+};
 
-export default connect(mapStateToProps,mapDispatchToProps)(SignIn);
+export default connect(mapStateToProps, mapDispatchToProps)(SignIn);
