@@ -4,7 +4,7 @@ import Sidebar from "../components/Sidebar";
 import Footer from "../components/Footer";
 import { navUserObj } from "../components/Navbar/NavData";
 import Services from "../components/services";
-import { eventsComponenets } from "../components/services/ServicesData";
+import { eventsComponents } from "../components/services/ServicesData";
 
 const UserEvent = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,7 +16,7 @@ const UserEvent = () => {
     <>
       <Sidebar {...navUserObj} isOpen={isOpen} toggle={toggle} />
       <Navbar {...navUserObj} toggle={toggle} />
-      <Services {...eventsComponenets} />
+      <Services {...eventsComponents} />
       <Footer />
     </>
   );

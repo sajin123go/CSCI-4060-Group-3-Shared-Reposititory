@@ -17,12 +17,14 @@ const Sidebar = ({
   navItem2,
   navItem3,
   navItem4,
+  navItem5,
   navLink1,
   navLink2,
   navLink3,
   navLink4,
   navLink5,
-  navItem5,
+  navLink6,
+  navItem6,
 }) => {
   return (
     <SidebarContainer isOpen={isOpen} onClick={toggle}>
@@ -43,9 +45,12 @@ const Sidebar = ({
           <SidebarLink to={navLink4} onClick={toggle}>
             {navItem4}
           </SidebarLink>
+          <SidebarLink to={navLink5} onClick={toggle}>
+            {navItem5}
+          </SidebarLink>
         </SidebarMenu>
         <SideBtnWrap>
-          <SidebarRoute to={navLink5}>{navItem5}</SidebarRoute>
+          <SidebarRoute to={navLink6}>{navItem6}</SidebarRoute>
         </SideBtnWrap>
       </SidebarWrapper>
     </SidebarContainer>
