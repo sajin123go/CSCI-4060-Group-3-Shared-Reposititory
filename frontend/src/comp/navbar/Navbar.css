@@ -1,0 +1,63 @@
+.Navbar{
+    width: 100%;
+    height: 90px;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    border-bottom: 1px solid #eeefee;
+}
+
+.Navbar .container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.Navbar span {
+    color: gold;
+}
+
+.Navbar .NavMenu {
+    display: flex;
+}
+
+.Navbar li {
+    padding: 1rem;
+}
+
+.hamborger {
+    display: none;
+}
+
+.Navbar .icon {
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width:650px) {
+    .hamborger {
+        display: block;
+    }
+    .Navbar .NavMenu {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        top: 90px;
+        right: -100%;
+        height: 100%;
+        width: 100%;
+        background: white;
+        transition: .4s ease-in-out;
+        z-index: 10;
+    }
+
+    .Navbar .active {
+        right: 0;
+    }
+
+    .Navbar .NavMenu li a {
+        font-size: 2rem;
+    }
+}
