@@ -1,0 +1,15 @@
+{
+    "item":[{         
+            "firstName": "Sajin",
+            "LastName": "Shrestha",
+            "birthDay": 27,
+            "birthMonth" : 10,
+            "birthYear": 1998,
+            "Email": "sajinshrestha74@gmail.com",
+            "address": "4007 spurgeon dr, Apt 8",
+            "city" : "Monroe",
+            "state":  "LA",
+            "country": "USA"
+    }
+    ]
+}

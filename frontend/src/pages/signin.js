@@ -1,11 +1,13 @@
 import React from 'react';
-import LoginApp from './components/login-register/LoginApp';
+import ScrollToTop from '../components/ScrollToTop';
+import SignIn from '../components/Signin';
 
-const LoginApp = () => {
+const SigninPage = () => {
   return (
-  <>
-    <LoginApp />
-  </>);
+  <div>
+    <ScrollToTop />
+    <SignIn />
+  </div>);
 };
 
-export default LoginApp;
+export default SigninPage;
