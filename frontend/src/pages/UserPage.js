@@ -13,7 +13,7 @@ import {
 } from "../components/InfoSections/Data";
 import {
   scholarshipComponents,
-  eventsComponenets,
+  eventsComponents,
 } from "../components/services/ServicesData";
 
 const User = () => {
@@ -28,7 +28,7 @@ const User = () => {
       <Navbar {...navUserObj} toggle={toggle} />
       <HeroSection {...userHomeObj} />
       <InfoSection {...userAccountObj} />
-      <Services {...eventsComponenets} />
+      <Services {...eventsComponents} />
       <Services {...scholarshipComponents} />
       <InfoSection {...userPaymentObj} />
       <Footer />

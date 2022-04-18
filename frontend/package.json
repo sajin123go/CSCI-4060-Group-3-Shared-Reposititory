@@ -62,5 +62,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "this is profile change.",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC"
 }

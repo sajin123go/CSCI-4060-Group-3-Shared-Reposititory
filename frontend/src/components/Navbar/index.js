@@ -29,11 +29,13 @@ const Navbar = ({
   navLink3,
   navLink4,
   navLink5,
+  navLink6,
   navItem5,
+  navItem6,
 }) => {
   const [scrollNav, setScrollNav] = useState(false);
 
-  const changeNav = (props) => {
+  const changeNav = () => {
     if (window.scrollY >= 80) {
       setScrollNav(true);
     } else {
@@ -100,7 +102,7 @@ const Navbar = ({
                 </NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinksR
+                <NavLinks
                   to={navLink4}
                   smooth={true}
                   duration={500}
@@ -109,11 +111,23 @@ const Navbar = ({
                   offset={-80}
                 >
                   {navItem4}
+                </NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinksR
+                  to={navLink5}
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  exact="true"
+                  offset={-80}
+                >
+                  {navItem5}
                 </NavLinksR>
               </NavItem>
             </NavMenu>
             <NavBtn>
-              <NavBtnLink to={navLink5}> {navItem5}</NavBtnLink>
+              <NavBtnLink to={navLink6}> {navItem6}</NavBtnLink>
             </NavBtn>
           </NavbarContainer>
         </Nav>

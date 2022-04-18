@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import axios from "../../axios";
 import "./App.css";
+import Navbar from "../../components/Navbar";
+import Sidebar from "../../components/Sidebar";
+import { navHomeObj } from "../../components/Navbar/NavData";
 
 import {
   Container,
@@ -33,6 +36,13 @@ const Register = () => {
   const [zip, setZip] = useState("");
   const [membershipType, setmembershipType] = useState("");
   const navigate = useNavigate();
+  const [isOpen, setIsOpen] = useState(false);
+  
+  const toggle = () => {
+      setIsOpen(!isOpen);}
+   
+
+
 
   function signinHandler(event) {
     axios
@@ -56,9 +66,14 @@ const Register = () => {
       .catch((err) => console.log(err));
   }
 
+  
+    
+
   return (
     <>
-      <Container id= "registerForm">
+      <Sidebar {...navHomeObj} isOpen={isOpen} toggle={toggle} />
+      <Navbar {...navHomeObj} toggle={toggle} />
+      <Container>
         <FormWrap>
           <FormContent>
             <Form action="#">

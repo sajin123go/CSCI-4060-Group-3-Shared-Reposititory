@@ -3,15 +3,18 @@ import HeroSection from "../components/HeroSelections";
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
 import InfoSection from "../components/InfoSections";
+
 import { heroHomeObj } from "../components/HeroSelections/HeroData";
 import {
   homeObjOne,
   homeObjTwo,
   homeObjThree,
+  homeObjFour,
 } from "../components/InfoSections/Data";
 import Services from "../components/services";
 import Footer from "../components/Footer";
 import { navHomeObj } from "../components/Navbar/NavData";
+import { eventsComponents } from "../components/services/ServicesData";
 import { scholarshipComponents } from "../components/services/ServicesData";
 
 const Home = () => {
@@ -27,8 +30,9 @@ const Home = () => {
       <HeroSection {...heroHomeObj} />
       <InfoSection {...homeObjOne} />
       <InfoSection {...homeObjTwo} />
+      <Services {...eventsComponents}/>
       <Services {...scholarshipComponents}/>
-      <InfoSection {...homeObjThree} />
+      <InfoSection {...homeObjFour} />
       <Footer />
     </>
   );

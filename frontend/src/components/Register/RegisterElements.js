@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+// import { Link, animateScroll as scroll } from "react-scroll";
 
 export const Container = styled.div`
   min-height: 692px;
@@ -21,8 +22,6 @@ export const FormWrap = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 100px;
-  margin-bottom: 100px;
   @media screen and (max-width: 400px) {
     height: 80%;
   }
@@ -43,7 +42,7 @@ export const Icon = styled(Link)`
 `;
 
 export const FormContent = styled.div`
-  height: 100%;
+  height:auto;
   display: flex;
   flex-direction: column;
   justify-content: center;

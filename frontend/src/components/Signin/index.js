@@ -13,6 +13,7 @@ import {
 import axios from "axios";
 import React, { useState } from "react";
 import { connect } from "react-redux";
+// import { Button } from "react-bootstrap";
 import {
   authenticate,
   authFailure,
@@ -20,9 +21,15 @@ import {
 } from "../../redux/authActions";
 import { Link, useNavigate } from "react-router-dom";
 import { userLogin } from "../../authenticationService";
-import { Alert, Spinner } from "react-bootstrap";
+// import { Alert, Spinner } from "react-bootstrap";
 import Captcha from "../recaptcha/Captcha";
 import App from "../../App";
+import Navbar from "../../components/Navbar";
+import Sidebar from "../../components/Sidebar";
+import { navHomeObj } from "../../components/Navbar/NavData";
+
+
+
 
 const SignIn = ({ loading, error, ...props }) => {
   const navigate = useNavigate();
@@ -30,6 +37,11 @@ const SignIn = ({ loading, error, ...props }) => {
     email: "",
     password: "",
   });
+
+  const [isOpen, setIsOpen] = useState(false);
+  
+  const toggle = () => {
+      setIsOpen(!isOpen);}
 
   const loginHandler = (evt) => {
     evt.preventDefault();
@@ -77,9 +89,10 @@ const SignIn = ({ loading, error, ...props }) => {
   console.log("Loading ", loading);
   return (
     <>
+      <Sidebar {...navHomeObj} isOpen={isOpen} toggle={toggle} />
+      <Navbar {...navHomeObj} toggle={toggle} />
       <Container>
         <FormWrap>
-          <Icon to="/">Nafa</Icon>
           <FormContent>
             <Form action="#">
               <FormH1>Sign in to your account</FormH1>

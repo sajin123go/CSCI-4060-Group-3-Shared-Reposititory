@@ -6,26 +6,26 @@ export const scholarshipComponents = {
   id: "scholarship",
   heading: "Donate for our Tigers",
   cardsData: scholarshipData,
-  buttonTo: "/scholarship",
+  buttonTo: "/scholarship/all",
   buttonLable: "More Scholarship",
   lightBg: false,
   lightText: true,
   cLightBg: true,
-  cButtonTo: "/scholarship",
   cButtonLabel: "Donate",
+  cButtonTo: "/payment",
 };
 
-export const eventsComponenets = {
+export const eventsComponents = {
   id: "events",
   heading: "Events",
   cardsData: eventData,
-  buttonTo: "/events",
+  buttonTo: "/event/all",
   buttonLable: "More Events",
   lightBg: true,
   lightText: false,
   cLightBg: false,
-  cButtonTo: "/events",
-  cButtonLabel: "Going",
+  cButtonTo: "/event",
+  cButtonLabel: "Learn More",
 };
 
 export const membershipComponents = {
