@@ -20,6 +20,8 @@ export const Container = styled.div`
 export const FormWrap = styled.div`
   height: 100%;
   display: flex;
+  margin-top: 100px;
+  margin-bottom: 100px;
   flex-direction: column;
   justify-content: center;
   @media screen and (max-width: 400px) {
