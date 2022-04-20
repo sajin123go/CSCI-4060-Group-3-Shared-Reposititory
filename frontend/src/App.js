@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import Layout from "./pages/Layout";
 import { fetchUserData } from "./authenticationService";
 import Home from "./pages";
 import SigninPage from "./pages/signin";
@@ -24,27 +25,34 @@ import UserScholarship from "./pages/UserScholarship";
 // import NewEvent from "./pages/newEvent/NewEvent";
 
 function App() {
-  const token = localStorage.getItem("USER_KEY");
-  const [userData, setUserData] = useState({});
-  const notLoggedIn = {
-    role: "Na",
-  };
+  // const token = localStorage.getItem("USER_KEY");
+  // const [userData, setUserData] = useState({});
+  // const notLoggedIn = {
+  //   role: "Na",
+  // };
 
-  React.useEffect(() => {
-    fetchUserData()
-      .then((response) => {
-        setUserData(response.data);
-      })
-      .catch((e) => {
-        localStorage.clear();
-      });
-  }, []);
+  // React.useEffect(() => {
+  //   fetchUserData()
+  //     .then((response) => {
+  //       setUserData(response.data);
+  //     })
+  //     .catch((e) => {
+  //       localStorage.clear();
+  //     });
+  // }, []);
 
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} exact />
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        {/* public routes */}
+        <Route path="/" element={<Home />} />
         <Route path="/signin" element={<SigninPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+      </Route>
+
+      {/* <Routes>
+        <Route path="/" element={<Home />} exact />
+        
         <Route path="/register" element={<RegisterPage />} exact />
         <Route path="/user" element={<UserPage />} exact />
         <Route path="/account" element={<Account />} exact />
@@ -54,10 +62,8 @@ function App() {
 
         <Route path="/scholarship" element={<UserScholarship />} exact /> 
 
-        <Route path="/scholarship" element={<UserScholarship />} exact />
-        <Route path="/" element={<Home />}  />
 
-      </Routes>
+      </Routes> */}
 
       {/* <Topbar />
       <div className="container">
@@ -72,7 +78,7 @@ function App() {
           <Route path="/newevent" element={<NewEvent />} exact />
         </Routes>
       </div> */}
-    </Router>
+    </Routes>
   );
 }
 

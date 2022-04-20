@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 import { navUserObj } from "../components/Navbar/NavData";
 import Services from "../components/services";
 import { scholarshipComponents } from "../components/services/ServicesData";
-import axios from "../axios";
+import axios from "../api/axios";
 
 const UserScholarship = () => {
   const [isOpen, setIsOpen] = useState(false);
