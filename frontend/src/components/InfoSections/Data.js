@@ -1,5 +1,3 @@
-
-
 export const homeObjOne = {
   id: "about",
   lightBg: true,
@@ -54,7 +52,7 @@ export const homeObjThree = {
   dark: true,
   primary: true,
   darkText: false,
-  to: "/event/all",
+  to: "/event",
 };
 
 export const homeObjFour = {
@@ -77,7 +75,7 @@ export const homeObjFour = {
 };
 
 export const userAccountObj = {
-  id: "about",
+  id: "account",
   lightBg: false,
   lightText: true,
   lightTextDesc: true,
@@ -95,7 +93,7 @@ export const userAccountObj = {
 };
 
 export const userPaymentObj = {
-  id: "scholarship",
+  id: "payments",
   lightBg: true,
   lightText: false,
   lightTextDesc: false,

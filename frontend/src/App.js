@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Layout from "./pages/Layout";
-import { fetchUserData } from "./authenticationService";
 import Home from "./pages";
 import SigninPage from "./pages/signin";
 import RegisterPage from "./pages/register";
@@ -13,6 +12,12 @@ import Edit from "./pages/EditProfile";
 import Mpayment from "./pages/Mpayment";
 import UserEvent from "./pages/UserEvent";
 import UserScholarship from "./pages/UserScholarship";
+
+const ROLES = {
+  User: 2001,
+  Editor: 1984,
+  Admin: 5150,
+};
 
 // import Sidebar from "./components/Sidebars/Sidebar";
 // import Topbar from "./components/topbar/Topbar";
@@ -49,6 +54,10 @@ function App() {
         <Route path="/signin" element={<SigninPage />} />
         <Route path="/register" element={<RegisterPage />} />
       </Route>
+
+      <Route path="/user" element={<UserPage />} exact />
+      <Route path="/account" element={<Account />} exact />
+      <Route path="/userEdit" element={<Edit />} exact />
 
       {/* <Routes>
         <Route path="/" element={<Home />} exact />

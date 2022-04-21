@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import ImageSlider from "../Imageslider/ImageSlider";
 import { SliderData } from "../Imageslider/SliderData";
-import Video from "../../videos/video.mp4";
 import { ButtonS as  Button} from "../ButtonElement";
 import {
   HeroContainer,
   HeroBg,
-  VideoBg,
   HeroContent,
   HeroH1,
   HeroP,
@@ -25,7 +23,6 @@ const HeroSection = ({id, header1, header2, to, buttonLable}) => {
   return (
     <HeroContainer id={id}>
       <HeroBg>
-        {/* <VideoBg autoPlay loop muted src= {Video} type='video/mp4' /> */}
         <ImageSlider slides={SliderData} />
       </HeroBg>
       <HeroContent>

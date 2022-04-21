@@ -97,7 +97,7 @@ const Navbar = ({
                   spy={true}
                   exact="true"
                   offset={-80}
-                >
+                > 
                   {navItem3}
                 </NavLinks>
               </NavItem>
