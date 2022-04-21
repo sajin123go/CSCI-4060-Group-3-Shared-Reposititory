@@ -16,6 +16,8 @@ import {
   eventsComponents,
 } from "../components/services/ServicesData";
 
+import ScrollToTop from "../components/ScrollToTop";
+
 const User = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -24,6 +26,7 @@ const User = () => {
   };
   return (
     <>
+      <ScrollToTop />
       <Sidebar {...navUserObj} isOpen={isOpen} toggle={toggle} />
       <Navbar {...navUserObj} toggle={toggle} />
       <HeroSection {...userHomeObj} />

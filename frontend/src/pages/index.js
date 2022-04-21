@@ -16,6 +16,7 @@ import Footer from "../components/Footer";
 import { navHomeObj } from "../components/Navbar/NavData";
 import { eventsComponents } from "../components/services/ServicesData";
 import { scholarshipComponents } from "../components/services/ServicesData";
+import ScrollToTop from "../components/ScrollToTop";
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,6 +26,7 @@ const Home = () => {
   };
   return (
     <>
+      <ScrollToTop />
       <Sidebar {...navHomeObj} isOpen={isOpen} toggle={toggle} />
       <Navbar {...navHomeObj} toggle={toggle} />
       <HeroSection {...heroHomeObj} />
