@@ -3,11 +3,7 @@ package com.Nafa.backendProject.Controller;
 import java.util.ArrayList;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.Nafa.backendProject.Entity.Role;
 import com.Nafa.backendProject.Service.RoleService;
@@ -29,5 +25,6 @@ public class RoleController {
 	public ArrayList<Role> getAllRoles(){
 		return roleService.findAllRoles();
 	}
+
 	
 }

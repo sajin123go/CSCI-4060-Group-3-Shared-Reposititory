@@ -6,14 +6,13 @@ import java.util.Objects;
 
 import javax.validation.Valid;
 
+import com.Nafa.backendProject.Entity.*;
+import com.Nafa.backendProject.Repository.MembershipRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.support.SimpleJpaRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.Nafa.backendProject.Entity.Event;
-import com.Nafa.backendProject.Entity.Group;
-import com.Nafa.backendProject.Entity.Member;
-import com.Nafa.backendProject.Entity.Role;
 import com.Nafa.backendProject.Repository.GroupRepository;
 import com.Nafa.backendProject.Repository.MemberRepository;
 import com.Nafa.backendProject.Repository.RoleRepository;
@@ -33,6 +32,9 @@ public class MemberServiceImpl implements MemberService{
 
 	@Autowired
 	private GroupRepository groupRepository;
+
+	@Autowired
+	private MembershipRepository membershipRepository;
 	
 	@Override
 	public void registerMember(Member member) {
@@ -142,6 +144,23 @@ public class MemberServiceImpl implements MemberService{
 		return (ArrayList<Event>) attendingEvents;
 	}
 
-	
+	@Override
+	public ArrayList<Scholarship> getAllScholarshipDonationsOfMember(Long memberId) {
+		Member member = memberRepository.findById(memberId).get();
+		List<Scholarship> scholarshipDonations = new ArrayList<>();
+		for(Scholarship scholarship : member.getScholarships()) {
+			scholarshipDonations.add(scholarship);
+		}
+		return (ArrayList<Scholarship>) scholarshipDonations;
+	}
+
+	@Override
+	public String memberPurchaseMembership(Long memberId, Long membershipId) {
+		Member fetchedMember = memberRepository.findById(memberId).get();
+		Membership fetchedMembership = membershipRepository.findById(membershipId).get();
+		fetchedMember.setMembership(fetchedMembership);
+		return "membership purchased";
+	}
+
 
 }

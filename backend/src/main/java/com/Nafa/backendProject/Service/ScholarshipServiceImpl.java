@@ -74,11 +74,7 @@ public class ScholarshipServiceImpl implements ScholarshipService{
 		return (ArrayList<Member>) donatedMembers;
 	}
 
-	@Override
-	public ArrayList<Scholarship> getAllScholarshipDonationsOfMember(Long memberId) {
-		Member member = memberRepository.findById(memberId).get();
-		return (ArrayList<Scholarship>) member.getScholarships();
-	}
+
 
 
 }

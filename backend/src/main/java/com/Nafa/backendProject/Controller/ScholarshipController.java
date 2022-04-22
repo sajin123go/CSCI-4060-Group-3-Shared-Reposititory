@@ -35,8 +35,4 @@ public class ScholarshipController {
 		return scholarshipService.getScholarshipByScholarshipName(scholarshipName);
 	}
 	
-	@GetMapping("/members/all/{scholarshipId}")
-	public ArrayList<Member> getAllMembersDonatedToScholarship(@PathVariable Long scholarshipId){
-		return scholarshipService.getAllMembersDonatedToScholarship(scholarshipId);
-	}
 }

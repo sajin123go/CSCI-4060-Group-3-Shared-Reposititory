@@ -105,7 +105,12 @@ public class MemberController {
 	
 	@GetMapping("/{memberId}/shcholarship/all")
 	public ArrayList<Scholarship> getAllScholarshipDonationsOfMember(@PathVariable Long memberId){
-		return scholarshipService.getAllScholarshipDonationsOfMember(memberId);
+		return memberService.getAllScholarshipDonationsOfMember(memberId);
+	}
+
+	@PostMapping("/{memberId}/purchase-membership/{membershipId}")
+	public String memberPurchaseMembership(@PathVariable Long memberId, @PathVariable Long membershipId){
+		return memberService.memberPurchaseMembership(memberId,membershipId);
 	}
 	
 	

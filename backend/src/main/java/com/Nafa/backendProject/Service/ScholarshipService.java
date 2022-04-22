@@ -24,7 +24,5 @@ public interface ScholarshipService {
 
 	String memberDonateToScholarship(Long memberId, Long scholarshipId);
 
-	ArrayList<Scholarship> getAllScholarshipDonationsOfMember(Long memberId);
-	
 	ArrayList<Member> getAllMembersDonatedToScholarship(Long scholarshipId);
 }

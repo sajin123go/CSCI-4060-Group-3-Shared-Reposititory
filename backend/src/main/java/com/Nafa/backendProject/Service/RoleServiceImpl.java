@@ -2,6 +2,7 @@ package com.Nafa.backendProject.Service;
 
 import java.util.ArrayList;
 
+import com.Nafa.backendProject.Entity.Member;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -30,4 +31,5 @@ public class RoleServiceImpl implements RoleService{
 	public ArrayList<Role> findAllRoles() {
 		return (ArrayList<Role>) roleRepository.findAll();
 	}
+
 }

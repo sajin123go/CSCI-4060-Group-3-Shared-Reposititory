@@ -7,6 +7,7 @@ import javax.validation.Valid;
 import com.Nafa.backendProject.Entity.Event;
 import com.Nafa.backendProject.Entity.Group;
 import com.Nafa.backendProject.Entity.Member;
+import com.Nafa.backendProject.Entity.Scholarship;
 
 public interface MemberService {
 
@@ -39,4 +40,7 @@ public interface MemberService {
 	ArrayList<Event> getAllAttendingEvents(Long memberId);
 
 
+    ArrayList<Scholarship> getAllScholarshipDonationsOfMember(Long memberId);
+
+	String memberPurchaseMembership(Long memberId, Long membershipId);
 }
