@@ -1,35 +1,34 @@
-import React, {useState} from 'react'
 import './Sship.css'
-import {BiHide} from 'react-icons/bi'
-import {BiShow} from 'react-icons/bi'
-import scholarshipDefault from '../../asset/scholarshipDefault.PNG'
+import {AiOutlineSearch} from 'react-icons/ai'
+import sList from './sList' 
+import background from '../../asset/school.jpg'
 
-function Sship({name, description}) {
-
-    const[click, clicked] = useState(false)
-    const clickHandle = () => clicked(!click)
-
+const Sship = ({ scholarships, handleDelete, Ssearch, setSsearch }) => {
     return (
-        <div className='sship'>
-            <div className='show' onClick={clickHandle}>
-                    {click ? (<BiShow />) : (<BiHide />) }
-            </div>
-
-            <h3>{name}</h3>
-
-            <div className='sinfo'>
-                
-                <p>{description} </p>
-                <div className={click ? 'simage active' : 'simage'} >
-                    <img src={scholarshipDefault} alt='Default Scholarship' />
+        
+       <main>
+            <div className='Sbar' style={` background: background') no-repeat center center/cover `}>
+                <div className='content'>
+                    <h1>Scholarship</h1>
+                    <p className='Stext'>Search</p>
+                    <form className='search' onSubmit={(e) => e.preventDefault()}>
+                        <div>
+                            <input type='text' role='searchbox' placeholder='Enter Scholarship Name..' value={Ssearch} onChange={(e) => setSsearch(e.target.value)} />
+                        </div>
+                        <div className='button'>
+                            <button type='submit'><AiOutlineSearch className='icon'/></button>
+                            
+                        </div>
+                    </form>
                 </div>
-                
             </div>
-            
-            <button className='btn'>Donate</button>
-
-            
-        </div>
+           {scholarships.length ? (
+               <sList    
+               scholarships={scholarships}
+               handleDelete={handleDelete}/>
+           ) : (
+           <p> There are currently no Scholarship.</p>)}
+        </main>
     )
 }
 

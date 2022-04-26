@@ -1,0 +1,17 @@
+{
+    "scholarships": [
+        {
+            "id":1,
+            "title":"scholarship name 1",
+            "description":"Detailed description of the scholarship",
+            "picture":"picture url"
+
+        },
+        {
+            "id":2,
+            "title":"scholarship name 2",
+            "description":"Detailed description of the scholarship 2",
+            "picture":"picture url 2"
+        }
+    ]
+}
